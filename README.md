@@ -4,11 +4,11 @@
 如果是应用在项目当中的话找到根目录，需要和 `composer.json`同级
 
 ```
-composer require kail520/redis_lbs
+composer require gaopengfei/redis_lbs
 ```
 
 ## 配置
-专门为Yii2框架使用
+使用时，需要修改配置文件 `src/config/config.php`
 ```
   'geoset_name' => 'LBS_set',
     'radium_option' => [
@@ -42,36 +42,6 @@ $config = [
           ];
  $lbs = new \LBS\Services\LBSService($config);
 ```
-
-如果是 `laravel` 框架下，需要编辑 `config/app.php`
-```
- 'providers' => [
-    ...
-     \LBS\Provider\RedisLbsProvider::class,
-    ...
-  ],
- 
- //如果需要facade模式的话也可以开一下
-  'aliases' => [
-    ...
-    'LBSServer' => \LBS\Facade\LBSServer::class,
-    ...
-  ]
-```
-
-然后执行
-```
-php artisan vendor:publish
-```
-将生成 `config/redis_lbs.php` 配置文件，配置文件中的
-```
-//是否应用在laravel当中
-'is_laravel' => false,
-//使用laravel的redis版本
-'laravel_redis' => 'default',
-```
-当 `is_laravel => true` 的时候， `laravel_redis => 'default'` 将调用 `config/database.php`下的redis相应的配置
-
 
 有以下三种使用方式
 ```
