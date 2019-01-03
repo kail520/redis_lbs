@@ -4,11 +4,11 @@
 如果是应用在项目当中的话找到根目录，需要和 `composer.json`同级
 
 ```
-composer require gaopengfei/redis_lbs
+composer require kail520/redis_lbs
 ```
 
 ## 配置
-如果不是 `laravel` 框架的话，需要修改配置文件 `src/config/config.php`
+专门为Yii2框架使用
 ```
   'geoset_name' => 'LBS_set',
     'radium_option' => [
