@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: gaopengfei
- * Date: 2017/3/13
- * Time: 下午5:21
- */
 
 namespace LBS\Provider;
 

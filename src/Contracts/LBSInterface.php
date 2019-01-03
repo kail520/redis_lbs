@@ -1,12 +1,5 @@
 <?php
 namespace LBS\Contracts;
-/**
- * Created by PhpStorm.
- * User: gaopengfei
- * Date: 2017/3/10
- * Time: 下午7:06
- */
-
 
 interface LBSInterface
 {

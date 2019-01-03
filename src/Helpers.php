@@ -1,11 +1,5 @@
-<?php namespace LBS;
-/**
- * Created by PhpStorm.
- * User: gaopengfei
- * Date: 2017/3/11
- * Time: 下午12:11
- */
-
+<?php
+namespace LBS;
 class Helper{
     public static function dd($var=null){
         if (is_null($var)) die();
