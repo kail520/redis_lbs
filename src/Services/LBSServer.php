@@ -36,7 +36,7 @@ class LBSServer implements LBSInterface
     {
         $config = $this->getConfig($config);
         extract($config);
-
+        
         if (is_null(self::$redis)){
             $redis = new RedisServer();
             self::$redis = $redis::$server;
@@ -58,14 +58,7 @@ class LBSServer implements LBSInterface
      */
     protected function getConfig($config = null)
     {
-        $file =$config?: include_once (__DIR__.'/../config/config.php');
-        if(function_exists('config')){
-            $file = $config?:config('redis_lbs');
-
-            if(isset($file['is_laravel']) && $file['is_laravel'] && isset($file['laravel_redis'])){
-                $file['redis_connection'] = config("database.redis.{$file['laravel_redis']}");
-            }
-        }
+        $file = $config ? : \Yii::$app->params['redis_lbs'];
         return $file?:[];
     }
 
