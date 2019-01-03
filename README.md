@@ -8,7 +8,7 @@ composer require gaopengfei/redis_lbs
 ```
 
 ## 配置
-使用时，需要修改配置文件 `src/config/config.php`
+使用时，需要修改配置文件 `params.php`
 ```
   'geoset_name' => 'LBS_set',
     'radium_option' => [
